@@ -1,0 +1,18 @@
+@startuml
+
+class Agenda {
+    - Id: int
+    - Name: string
+}
+
+class Todo {
+    - Id: int
+    - Task: string
+    - Completed: bool
+    - Deadline: DateTime?
+    - AgendaId: int?
+}
+
+Agenda "1" -- "0..*" Todo : contains >
+
+@enduml
